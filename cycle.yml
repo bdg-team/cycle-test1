@@ -64,7 +64,7 @@ containers:
       name: "Php"
       source: 
         docker_file:
-          target: "/php"
+          path: "/php"
       preload: false
     volumes:
       - local: 
