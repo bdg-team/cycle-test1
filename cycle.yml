@@ -15,7 +15,7 @@ containers:
         destination: "/data/db"
         read_only: false
         remote_access:
-          enable: true,
+          enable: true
           default_password: 125D6D03B32C84D492747F79CF0BF6E179D287F341384EB5D6D3197525AD6BE8E6DF0116032935698F99A09E265073D1D6C32C274591BF1D0A20AD67CBA921BC
     config:
       runtime:
