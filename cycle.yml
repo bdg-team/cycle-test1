@@ -63,8 +63,8 @@ containers:
     image:
       name: "Php"
       source: 
-        docker_hub:
-          target: "php:5.6-apache"
+        docker_file:
+          target: "/php"
       preload: false
     volumes:
       - local: 
@@ -85,7 +85,7 @@ containers:
       network:
         public: "enable"
         hostname: "php"
-        ports: ["80:4000"]
+        ports: ["80:80"]
         dns:
           nameservers: ["8.8.4.4", "8.8.8.8"]
       deployment:
