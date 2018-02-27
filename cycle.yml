@@ -58,7 +58,7 @@ containers:
           notify:
             emails: ["alex@alexmattoni.com"]
 
-  db:
+  php:
     name: "Php"
     image:
       name: "Php"
