@@ -12,7 +12,7 @@ containers:
     volumes:
       - local: 
           max_size: "2G"
-        destination: "db:/var/lib/mysql"
+        destination: "/db:/var/lib/mysql"
         read_only: false
         remote_access:
           enable: true
