@@ -4,24 +4,24 @@ containers:
   db:
     name: "Database"
     image:
-      name: "MongoDB"
+      name: "MysqlDb"
       source: 
-        docker_hub:
-          target: "mongo:3.6"
+        docker_file:
+          path: "/mysql"
       preload: false
     volumes:
       - local: 
           max_size: "2G"
-        destination: "/data/db"
+        destination: "db:/var/lib/mysql"
         read_only: false
         remote_access:
           enable: true
           default_password: ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff
     config:
       runtime:
-        command:
-          path: "/entrypoint.sh"
-          args: "mongod --auth"
+        # command:
+        #   path: "/entrypoint.sh"
+        #   args: "mongod --auth"
         privileged: false
         capabilities: []
         namespaces: ["network", "ipc", "uts", "mount", "pid"]
@@ -34,8 +34,8 @@ containers:
       deployment:
         instances: 1
         tags:
-          require: ["db"]
-          pool: ["sjc", "nyc"]
+          # require: ["db"]
+          pool: ["sjc", "nyc", "us"]
       resources:
         cpu:
           limit: "0.5cores"
@@ -91,8 +91,8 @@ containers:
       deployment:
         instances: 1
         tags:
-          require: ["php"]
-          pool: ["sjc", "nyc"]
+          # require: ["db"]
+          pool: ["sjc", "nyc", "us"]
       resources:
         cpu:
           limit: "0.5cores"
