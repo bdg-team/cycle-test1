@@ -58,12 +58,12 @@ containers:
           notify:
             emails: ["alex@alexmattoni.com"]
   php:
-    name: "Database"
+    name: "Php"
     image:
-      name: "MongoDB"
+      name: "php"
       source: 
-        docker_file:
-          path: "/../php"
+        docker_hub:
+          target: "5.6-apache"
       preload: false
     volumes:
       - local: 
