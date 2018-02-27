@@ -85,7 +85,7 @@ containers:
       network:
         public: "enable"
         hostname: "php"
-        ports: ["4000"]
+        ports: ["80:4000"]
         dns:
           nameservers: ["8.8.4.4", "8.8.8.8"]
       deployment:
