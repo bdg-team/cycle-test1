@@ -63,7 +63,7 @@ containers:
       name: "MongoDB"
       source: 
         docker_file:
-          path: "./php"
+          path: "/../php"
       preload: false
     volumes:
       - local: 
