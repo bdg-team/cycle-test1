@@ -69,7 +69,7 @@ containers:
     volumes:
       - local: 
           max_size: "2G"
-        destination: "/data/html"
+        destination: "/html:/var/www/html"
         read_only: false
         remote_access:
           enable: true
