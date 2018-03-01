@@ -4,7 +4,7 @@ containers:
   db:
     name: "Database"
     image:
-      name: "MysqlDb"
+      name: "MySqlDb"
       source: 
         docker_file:
           path: "/mysql"
